@@ -1,0 +1,16 @@
+# Imported photos (don't commit user photos)
+*.jpg
+*.jpeg
+*.png
+*.heic
+*.heif
+*.webp
+*.gif
+
+# macOS
+.DS_Store
+
+# Editor
+*.swp
+*.swo
+*~
