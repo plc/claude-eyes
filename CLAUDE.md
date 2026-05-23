@@ -30,11 +30,11 @@ Working directory (JPEG, ready to view)
 - Skill name in the installed SKILL.md is `claude-eyes` (renamed from `latest-photo`)
 - Filename format: `claude-yyyy-MM-dd-HHmmss.jpeg` (no colons -- colons break filenames on macOS)
 - `CLAUDE_PHOTO_INBOX` env var overrides the default inbox path
+- Cleanup script considers files stale after 24 hours (macOS `find -mtime +0`)
 
 ## Open items
 
 - Share-sheet variant of the Shortcut (send existing photos, not just freshly taken ones)
-- Auto-cleanup of old files in ClaudeInbox
 - Investigate adding a share-sheet Shortcut that sends existing Camera Roll photos
 
 ## File layout
@@ -45,6 +45,7 @@ claude-eyes/
     SKILL.md              -- skill definition (installed to ~/.claude/skills/claude-eyes/)
     scripts/
       get_latest_photo.sh -- the import script
+      cleanup_photos.sh   -- list/delete/archive stale images (>24h)
   install.sh              -- installer
   README.md               -- user-facing docs
   CLAUDE.md               -- this file

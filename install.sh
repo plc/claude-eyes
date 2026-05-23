@@ -12,7 +12,9 @@ fi
 mkdir -p "$SKILL_DIR/scripts"
 cp skill/SKILL.md "$SKILL_DIR/SKILL.md"
 cp skill/scripts/get_latest_photo.sh "$SKILL_DIR/scripts/get_latest_photo.sh"
+cp skill/scripts/cleanup_photos.sh "$SKILL_DIR/scripts/cleanup_photos.sh"
 chmod +x "$SKILL_DIR/scripts/get_latest_photo.sh"
+chmod +x "$SKILL_DIR/scripts/cleanup_photos.sh"
 
 echo "Installed claude-eyes skill to $SKILL_DIR"
 

@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-05-23 -- Cleanup feature
+
+- Added `cleanup_photos.sh` to list, delete, or archive stale images (older than 24 hours) from the inbox
+- Modes: `list` (dry-run), `delete`, `archive <dest_dir>`
+- Updated `SKILL.md` with cleanup instructions (skill runs `list` mode after import, then prompts user)
+- Updated `install.sh` to copy and chmod the new script
+- Uses `find -mtime +0` for the 24-hour threshold (macOS)
+
 ## 2026-05-23 -- Initial repo setup
 
 - Created master repo for the claude-eyes skill

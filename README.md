@@ -54,6 +54,19 @@ Create a new Shortcut called **"Send to Claude"** with these four actions:
 | "grab the last 3 photos" | Imports the 3 most recent photos |
 | "look at the picture I just sent" | Same as above -- the skill triggers on natural phrasing |
 
+## Cleanup
+
+Photos older than 24 hours accumulate in `ClaudeInbox` over time. The skill offers to clean them up after each import.
+
+You can also run cleanup manually:
+
+```bash
+cd ~/.claude/skills/claude-eyes
+bash scripts/cleanup_photos.sh list                # show stale files
+bash scripts/cleanup_photos.sh delete              # remove them
+bash scripts/cleanup_photos.sh archive ~/archive   # move to archive folder
+```
+
 ## Configuration
 
 Set `CLAUDE_PHOTO_INBOX` to override the default inbox location:

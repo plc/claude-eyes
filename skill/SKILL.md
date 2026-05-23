@@ -29,6 +29,23 @@ Shortcut, so "the photo I just took" lives in that folder.
 3. View the imported file(s) to see the photo, then carry on with whatever the
    user asked.
 
+## Cleanup
+
+After importing and viewing photos, check for stale images (older than 24 hours)
+still sitting in the inbox:
+
+```
+bash scripts/cleanup_photos.sh list
+```
+
+If stale files are listed, ask the user whether to:
+
+- **Delete** them: `bash scripts/cleanup_photos.sh delete`
+- **Archive** them to a local directory: `bash scripts/cleanup_photos.sh archive <path>`
+- **Skip** cleanup for now
+
+Do not delete or archive without asking first.
+
 ## Failure modes
 
 - **"Inbox folder not found"** -- the user hasn't set up the `ClaudeInbox` folder
